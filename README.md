@@ -30,7 +30,7 @@ source venv3/bin/activate
 
 Install any non-core Python packages you will use:
 ```
-pip install pandas [things] # space-delimited list of multiple packages
+pip install jupyter pandas [things] # space-delimited list of multiple packages
 ```
 
 Save the dependencies for your project:
@@ -50,3 +50,14 @@ pip install -r requirements.txt
 ```
 
 ### Windows users
+
+
+## Run Jupyter
+
+### Mac users
+
+```
+source venv3/bin/activate
+pip install -r requirements.txt
+jupyter notebook
+```
