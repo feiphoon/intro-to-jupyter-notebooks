@@ -57,7 +57,7 @@ pip install -r requirements.txt
 ### Windows users
 
 
-## Run Jupyter
+## Run Jupyter
 
 ### Mac users
 
@@ -66,4 +66,5 @@ source venv3/bin/activate
 pip install -r requirements.txt
 jupyter notebook
 ```
+
 Jupyter should launch in your browser at http://localhost:8888/.
