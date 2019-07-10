@@ -33,6 +33,11 @@ Install any non-core Python packages you will use:
 pip install jupyter pandas [things] # space-delimited list of multiple packages
 ```
 
+View the installed packages:
+```
+pip list
+```
+
 Save the dependencies for your project:
 ```
 pip freeze > requirements.txt
