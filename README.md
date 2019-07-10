@@ -1,5 +1,6 @@
 # Intro to Jupyter notebooks
-__Data COP 11/07/2019__
+_Data COP 11/07/2019_
+
 
 ## Setup
 
@@ -116,6 +117,7 @@ To load your dependencies next time:
 venv3\Scripts\activate
 pip install -r requirements.txt
 ```
+
 
 ## Run Jupyter
 
