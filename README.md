@@ -9,11 +9,11 @@ _Data COP 11/07/2019_
 2. [Windows users](#windows-users)
   * [Local setup](#local-setup-1)
   * [Run Jupyter](#run-jupyter-1)
-3. [Running from Docker (optional)](#running-from-docker--optional-)
+3. [Running from Docker (optional)](#running-from-docker--optional)
 
-
+<a name="mac-users"></a>
 ## Mac users
-
+<a name="local-setup"></a>
 ### Local setup
 
 Check for Python & `pip`:
@@ -65,7 +65,7 @@ source venv3/bin/activate
 pip install -r requirements.txt
 ```
 
-
+<a name="run-jupyter"></a>
 ### Run Jupyter
 
 ```bash
@@ -75,9 +75,9 @@ jupyter notebook
 
 Jupyter should launch in your browser at http://localhost:8888/.
 
-
+<a name="windows-users"></a>
 ## Windows users
-
+<a name="local-setup-1"></a>
 ### Local setup
 
 If you haven't installed Python before, first install Python 3.7 from [the official website](https://www.python.org/downloads/). Use default installation and don't forget to **add Python to your PATH**.
@@ -141,7 +141,7 @@ To use your record of dependencies for you yourself to reproduce this environmen
 venv3\Scripts\activate
 pip install -r requirements.txt
 ```
-
+<a name="run-jupyter-1"></a>
 ### Run Jupyter
 
 ```bash
@@ -151,7 +151,7 @@ jupyter notebook
 
 Jupyter should launch in your browser at http://localhost:8888/.
 
-
+<a name="running-from-docker--optional"></a>
 ## Running from Docker (optional)
 
 Docker is another (safer and convenient) way to run Jupyter notebooks. Jupyter provides [official Docker stacks](https://github.com/jupyter/docker-stacks), which are easy to work with and extend. You can install Docker by following the [official instructions](https://docs.docker.com/install/).
