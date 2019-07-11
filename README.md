@@ -139,7 +139,7 @@ jupyter notebook
 
 Jupyter should launch in your browser at http://localhost:8888/.
 
-## Running from Docker
+## Running from Docker (optional)
 
 Docker is another (safer and convenient) way to run Jupyter notebooks. Jupyter provides [official Docker stacks](https://github.com/jupyter/docker-stacks), which are easy to work with and extend. You can install Docker by following the [official instructions](https://docs.docker.com/install/).
 
