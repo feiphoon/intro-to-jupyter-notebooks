@@ -141,7 +141,9 @@ Jupyter should launch in your browser at http://localhost:8888/.
 
 ## Running from Docker
 
-Docker is another (safer and convenient) way to run Jupyter notebooks. Jupyter provides [official Docker stacks](https://github.com/jupyter/docker-stacks), which are easy to work with and extend. As an example, we have written a Dockerfile which inherits the *jupyter/scipy-notebook*, and extends it with some additional Jupyter plug-ins, and ability to access to our virtual cloud (via boto3), and SAX (via cx_oracle).
+Docker is another (safer and convenient) way to run Jupyter notebooks. Jupyter provides [official Docker stacks](https://github.com/jupyter/docker-stacks), which are easy to work with and extend. You can install Docker by following the [official instructions](https://docs.docker.com/install/).
+
+As an example, we have extended *jupyter/scipy-notebook* in a Dockerfile, which enables some additional Jupyter plug-ins, and access to our virtual cloud (via boto3) and SAX (via cx_oracle).
 
 First, we have to build the image:
 
