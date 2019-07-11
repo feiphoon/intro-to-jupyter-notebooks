@@ -1,8 +1,7 @@
 # Intro to Jupyter notebooks
 _Data COP 11/07/2019_
 
-
-## Setup
+## Setup locally
 
 ### Mac users
 
@@ -118,7 +117,6 @@ venv3\Scripts\activate
 pip install -r requirements.txt
 ```
 
-
 ## Run Jupyter
 
 ### Mac users
@@ -140,3 +138,23 @@ jupyter notebook
 ```
 
 Jupyter should launch in your browser at http://localhost:8888/.
+
+## Running from Docker (optional)
+
+Docker is another (safer and convenient) way to run Jupyter notebooks. Jupyter provides [official Docker stacks](https://github.com/jupyter/docker-stacks), which are easy to work with and extend. You can install Docker by following the [official instructions](https://docs.docker.com/install/).
+
+As an example, we have extended *jupyter/scipy-notebook* in a Dockerfile, which enables some additional Jupyter plug-ins, and access to our virtual cloud (via boto3) and SAX (via cx_oracle).
+
+First, we have to build the image:
+
+```bash
+docker build . ktech-jupyter -t 1.0.0
+```
+
+Then run the image using the command below:
+
+```bash
+docker run -v $HOME/.aws/credentials:/home/app/.aws/credentials:ro -v "$PWD":/home/jovyan/work -p 8888:8888 ktech-jupyter:1.0.0
+```
+
+Make sure that your AWS credentials are up-to-date.
