@@ -4,11 +4,11 @@ _Data COP 11/07/2019_
 ## Table of Contents
 
 1. [Mac users](#mac-users)
-  * [Local setup](#local-setup)
-  * [Run Jupyter](#run-jupyter)
+    * [Local setup](#local-setup)
+    * [Run Jupyter](#run-jupyter)
 2. [Windows users](#windows-users)
-  * [Local setup](#local-setup-1)
-  * [Run Jupyter](#run-jupyter-1)
+    * [Local setup](#local-setup-1)
+    * [Run Jupyter](#run-jupyter-1)
 3. [Running from Docker (optional)](#running-from-docker--optional)
 
 <a name="mac-users"></a>
