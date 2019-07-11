@@ -1,9 +1,20 @@
 # Intro to Jupyter notebooks
 _Data COP 11/07/2019_
 
-## Setup locally
+## Table of Contents
 
-### Mac users
+1. [Mac users](#mac-users)
+    * [Local setup](#local-setup)
+    * [Run Jupyter](#run-jupyter)
+2. [Windows users](#windows-users)
+    * [Local setup](#local-setup-1)
+    * [Run Jupyter](#run-jupyter-1)
+3. [Running from Docker (optional)](#running-from-docker--optional)
+
+<a name="mac-users"></a>
+## Mac users
+<a name="local-setup"></a>
+### Local setup
 
 Check for Python & `pip`:
 ```
@@ -43,18 +54,32 @@ Save the dependencies for your project:
 pip freeze > requirements.txt
 ```
 
-Exit the environment:
+To exit the environment:
 ```
 deactivate
 ```
 
-To load your dependencies next time:
+To use your record of dependencies for you yourself to reproduce this environment elsewhere, or for someone else to easily do this when they run your work:
 ```
 source venv3/bin/activate
 pip install -r requirements.txt
 ```
 
-### Windows users
+<a name="run-jupyter"></a>
+### Run Jupyter
+
+```bash
+source venv3/bin/activate
+jupyter notebook
+```
+
+Jupyter should launch in your browser at http://localhost:8888/.
+
+<a name="windows-users"></a>
+## Windows users
+<a name="local-setup-1"></a>
+### Local setup
+
 If you haven't installed Python before, first install Python 3.7 from [the official website](https://www.python.org/downloads/). Use default installation and don't forget to **add Python to your PATH**.
 
 ![alt text](images/win_installation.png "Windows installation")
@@ -110,35 +135,23 @@ Exit the environment:
 deactivate
 ```
 
-To load your dependencies next time:
+To use your record of dependencies for you yourself to reproduce this environment elsewhere, or for someone else to easily do this when they run your work:
 
 ```bash
 venv3\Scripts\activate
 pip install -r requirements.txt
 ```
-
-## Run Jupyter
-
-### Mac users
-
-```bash
-source venv3/bin/activate
-pip install -r requirements.txt
-jupyter notebook
-```
-
-Jupyter should launch in your browser at http://localhost:8888/.
-
-### Windows users
+<a name="run-jupyter-1"></a>
+### Run Jupyter
 
 ```bash
 venv3\Scripts\activate
-pip install -r requirements.txt
 jupyter notebook
 ```
 
 Jupyter should launch in your browser at http://localhost:8888/.
 
+<a name="running-from-docker--optional"></a>
 ## Running from Docker (optional)
 
 Docker is another (safer and convenient) way to run Jupyter notebooks. Jupyter provides [official Docker stacks](https://github.com/jupyter/docker-stacks), which are easy to work with and extend. You can install Docker by following the [official instructions](https://docs.docker.com/install/).
