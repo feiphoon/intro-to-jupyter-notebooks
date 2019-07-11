@@ -3,13 +3,15 @@ _Data COP 11/07/2019_
 
 ## Table of Contents
 
-1. [Mac users](#mac-users)
-    * [Local setup](#local-setup)
-    * [Run Jupyter](#run-jupyter)
-2. [Windows users](#windows-users)
-    * [Local setup](#local-setup-1)
-    * [Run Jupyter](#run-jupyter-1)
-3. [Running from Docker (optional)](#running-from-docker--optional)
+- [Intro to Jupyter notebooks](#Intro-to-Jupyter-notebooks)
+  - [Table of Contents](#Table-of-Contents)
+  - [Mac users](#Mac-users)
+    - [Local setup](#Local-setup)
+    - [Run Jupyter](#Run-Jupyter)
+  - [Windows users](#Windows-users)
+    - [Local setup](#Local-setup-1)
+    - [Run Jupyter](#Run-Jupyter-1)
+  - [Running from Docker (optional)](#Running-from-Docker-optional)
 
 <a name="mac-users"></a>
 ## Mac users
@@ -41,7 +43,7 @@ source venv3/bin/activate
 
 Install any non-core Python packages you will use:
 ```
-pip install jupyter pandas [things] # space-delimited list of multiple packages
+pip install jupyter pandas seaborn [things] # space-delimited list of multiple packages
 ```
 
 View the installed packages:
@@ -114,7 +116,7 @@ venv3\Scripts\activate
 Install any non-core Python packages (`jupyter` and `pandas`) you will use (space-delimited list of multiple packages):
 
 ```bash
-pip install jupyter pandas
+pip install jupyter pandas seaborn plotly
 ```
 
 View the installed packages:
@@ -156,7 +158,7 @@ Jupyter should launch in your browser at http://localhost:8888/.
 
 Docker is another (safer and convenient) way to run Jupyter notebooks. Jupyter provides [official Docker stacks](https://github.com/jupyter/docker-stacks), which are easy to work with and extend. You can install Docker by following the [official instructions](https://docs.docker.com/install/).
 
-As an example, we have extended *jupyter/scipy-notebook* in a Dockerfile, which enables some additional Jupyter plug-ins, and access to our virtual cloud (via boto3) and SAX (via cx_oracle).
+As an example, we have extended *jupyter/scipy-notebook* in a Dockerfile, which enables some additional Jupyter plug-ins, and allows us to access to our virtual cloud (via boto3) and SAX (via cx_oracle).
 
 First, we have to build the image:
 
