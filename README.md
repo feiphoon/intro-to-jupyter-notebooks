@@ -18,6 +18,11 @@ _Data COP 11/07/2019_
 <a name="local-setup"></a>
 ### Local setup
 
+Clone this repository. Navigate to where all your `git` things are, and:
+```
+git clone ssh://git@bitbucket.kobaltmusic.com:7999/data/intro-to-jupyter-notebooks.git
+```
+
 Check for Python & `pip`:
 ```
 python --version
@@ -32,7 +37,7 @@ virtualenv --version
 
 Navigate to your project folder (here!), and set up a virtual environment for Python 3.
 ```
-cd [project folder]
+cd intro-to-jupyter-notebooks
 python3 -m virtualenv venv3
 ```
 
@@ -82,6 +87,11 @@ Jupyter should launch in your browser at http://localhost:8888/.
 <a name="local-setup-1"></a>
 ### Local setup
 
+Clone this repository. Navigate to where all your `git` things are, and:
+```
+git clone ssh://git@bitbucket.kobaltmusic.com:7999/data/intro-to-jupyter-notebooks.git
+```
+
 If you haven't installed Python before, first install Python 3.7 from [the official website](https://www.python.org/downloads/). Use default installation and don't forget to **add Python to your PATH**.
 
 ![alt text](images/win_installation.png "Windows installation")
@@ -103,7 +113,7 @@ virtualenv --version
 Navigate to your project folder (here!), and set up a virtual environment for Python 3.
 
 ```bash
-cd [project folder]
+cd intro-to-jupyter-notebooks
 python -m virtualenv venv3
 ```
 
