@@ -3,15 +3,15 @@ _Data COP 11/07/2019_
 
 ## Table of Contents
 
-- [Intro to Jupyter notebooks](#Intro-to-Jupyter-notebooks)
-  - [Table of Contents](#Table-of-Contents)
-  - [Mac users](#Mac-users)
-    - [Local setup](#Local-setup)
-    - [Run Jupyter](#Run-Jupyter)
-  - [Windows users](#Windows-users)
-    - [Local setup](#Local-setup-1)
-    - [Run Jupyter](#Run-Jupyter-1)
-  - [Running from Docker (optional)](#Running-from-Docker-optional)
+- [Intro to Jupyter notebooks](#intro-to-jupyter-notebooks)
+  - [Table of Contents](#table-of-contents)
+  - [Mac users](#mac-users)
+    - [Local setup](#local-setup)
+    - [Run Jupyter](#run-jupyter)
+  - [Windows users](#windows-users)
+    - [Local setup](#local-setup-1)
+    - [Run Jupyter](#run-jupyter-1)
+  - [Running from Docker (optional)](#running-from-docker-optional)
 
 <a name="mac-users"></a>
 ## Mac users
@@ -173,7 +173,7 @@ As an example, we have extended *jupyter/scipy-notebook* in a Dockerfile, which 
 First, we have to build the image:
 
 ```bash
-docker build . ktech-jupyter -t 1.0.0
+docker build . -t ktech-jupyter:1.0.0
 ```
 
 Then run the image using the command below:
@@ -182,4 +182,4 @@ Then run the image using the command below:
 docker run -v $HOME/.aws/credentials:/home/app/.aws/credentials:ro -v "$PWD":/home/jovyan/work -p 8888:8888 ktech-jupyter:1.0.0
 ```
 
-Make sure that your AWS credentials are up-to-date.
+Make sure that your AWS credentials are up-to-date. In terminal you will see the instructions on how to access Jupyter, i.e. by copying and pasting the URL, `http://127.0.0.1:8888/?token=<generated_token>`, to your browser. The token is generated randomly each time you run the docker container, so don't forget to paste the latest token from the terminal.

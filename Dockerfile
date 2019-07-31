@@ -1,15 +1,18 @@
 FROM jupyter/scipy-notebook:d4cbf2f80a2a
 
 # install boto3, jupyter extensions and cx-oracle as jovyan
-RUN conda install --quiet --yes 'boto3=1.9*' && \
-    conda install --quiet --yes -v anaconda openpyxl=2.6.1 && \
-    conda install --quiet --yes -c conda-forge tqdm && \
-    conda install --quiet --yes -c conda-forge jupyter_contrib_nbextensions && \
-    conda install --quiet --yes -c conda-forge jupyter_nbextensions_configurator && \
+RUN conda install --quiet --yes -c conda-forge \
+    'boto3=1.9.*' \
+    'mlflow=1.1.*' \
+    'psycopg2=2.7.6' \
+    'openpyxl=2.6.1' \
+    'tqdm=4.31.1' \
+    'jupyter_contrib_nbextensions=0.5.1' \
+    'jupyter_nbextensions_configurator=0.4.1' \
+    'cx_oracle=7.1.*' && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER && \
-    pip install cx-oracle==7.1
+    fix-permissions /home/$NB_USER
 
 # Install oracle-instantclient as root
 # adapted from SYNC docker-oracle-python Dockerfile: http://bitbucket.kobaltmusic.com:7990/projects/SYNC/repos/docker-python-oracle
