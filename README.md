@@ -179,7 +179,7 @@ docker build . -t ktech-jupyter:1.0.0
 Then run the image using the command below:
 
 ```bash
-docker run -v $HOME/.aws/credentials:/home/app/.aws/credentials:ro -v "$PWD":/home/jovyan/work -p 8888:8888 ktech-jupyter:1.0.0
+docker run -v $HOME/.aws:/home/jovyan/.aws:ro -v "$PWD":/home/jovyan/work -p 8888:8888 ktech-jupyter:1.0.0
 ```
 
 Make sure that your AWS credentials are up-to-date. In terminal you will see the instructions on how to access Jupyter, i.e. by copying and pasting the URL, `http://127.0.0.1:8888/?token=<generated_token>`, to your browser. The token is generated randomly each time you run the docker container, so don't forget to paste the latest token from the terminal.
